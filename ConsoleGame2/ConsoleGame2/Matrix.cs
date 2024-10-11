@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,19 +26,17 @@ namespace ConsoleGame2
 
             return str.Remove(str.Length - len);
         }
-        public void Mazayka(int HeightIn, int WidhtIn)
+        public bool[,] Mazayka(int widht, int height)
         {
-            int height = HeightIn + 1;
-            int widht = WidhtIn + 1;
             int pX = 1;
             int pY = 1;
-            bool[,] mazayka = new bool[widht, height];
+            bool[,] mazayka = new bool[widht + 1, height + 1];
 
-            for (int i = 0; i < widht; i++) {
-                for (int j = 0; j < height; j++) {
+            for (int i = 0; i < widht + 1; i++) {
+                for (int j = 0; j < height + 1; j++) {
                     mazayka[i, j] = ((i % 2 != 0 && j % 2 != 0)
                                     && (i > 0 && j > 0)
-                                    && (i < widht - 1 && j < height - 1));
+                                    && (i < widht && j < height));
                 }
             }
             string history = "";
@@ -47,7 +46,7 @@ namespace ConsoleGame2
             bool flag = true;
             do
             {
-
+                Console.Clear();
                 foreach (char target in Shuffle(AWDS))
                 {
                     X = 0;
@@ -67,9 +66,9 @@ namespace ConsoleGame2
                             Y = 2;
                             break;
                     }
-                    if (pX + X > 0 && pX + X < widht)
+                    if (pX + X > 0 && pX + X < widht + 1)
                     {
-                        if (pY + Y > 0 && pY + Y < height)
+                        if (pY + Y > 0 && pY + Y < height + 1)
                         {
                             if (mazayka[pX + X, pY + Y])
                             {
@@ -110,32 +109,33 @@ namespace ConsoleGame2
                     pX += X; pY += Y;
                     history = RemoveEnd(history,1);
                 }
-                for (int j = 0; j < height ; j++)
-                {
-                    for (int i = 0; i < widht; i++)
-                    {
-                        if (i % 2 == 1 && j % 2 == 1)
-                        {
-                            Console.Write("# ");
-                            continue;
-                        }
 
-                        if (mazayka[i, j])
-                        {
-                            Console.Write("# ");
-                        }
-                        else
-                        {
-                            Console.Write("$ ");
-                        }
-
-                    }
-                    Console.WriteLine("");
-                }
-                Console.WriteLine(history);
             }
             while (!(pX == 1 && pY == 1));
-            Console.WriteLine("Ебать");
+
+            mazayka[0, 1] = true;
+            mazayka[widht, height - 1] = true;
+            for (int j = 0; j < height + 1; j++)
+            {
+                for (int i = 0; i < widht + 1; i++)
+                {
+                    if (i % 2 == 1 && j % 2 == 1)
+                    {
+                        mazayka[i, j] = true;
+                    }
+
+                    if (mazayka[i, j])
+                    {
+
+                    }
+
+
+                }
+
+            }
+
+
+            return mazayka;
         }
             
     }

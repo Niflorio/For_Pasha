@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанные с этой сборкой.
-[assembly: AssemblyTitle("I don't take rock")]
+[assembly: AssemblyTitle("Huita")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("I don't take rock")]
+[assembly: AssemblyProduct("Huita")]
 [assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID представляет идентификатор typelib, если этот проект доступен из модели COM
-[assembly: Guid("a9435a07-6a32-4ccd-831b-15e722ed62e3")]
+[assembly: Guid("9fc0a8f7-8b6e-4298-aabf-22f99ad03793")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //

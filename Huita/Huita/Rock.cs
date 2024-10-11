@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleGame2
+namespace Huita
 {
-    public class Wall: Cell
+    public class Rock : Cell
     {
-        public Wall(int x, int y, string value, bool movable, bool crossable) :
+        public Rock(int x, int y, string value, bool movable, bool crossable) :
             base(x, y, value, movable, crossable)
         {
         }
 
-        public Wall(int x, int y) :
-            base(x, y, "#", false, false)
+        public Rock(int x, int y) :
+            base(x, y, "R", true, false)
         {
         }
     }

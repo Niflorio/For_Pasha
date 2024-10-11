@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A9435A07-6A32-4CCD-831B-15E722ED62E3}</ProjectGuid>
+    <ProjectGuid>{9FC0A8F7-8B6E-4298-AABF-22F99AD03793}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>I_don_t_take_rock</RootNamespace>
-    <AssemblyName>I don%27t take rock</AssemblyName>
+    <RootNamespace>Huita</RootNamespace>
+    <AssemblyName>Huita</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cell.cs" />
+    <Compile Include="Character.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Grass.cs" />
+    <Compile Include="Plate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rock.cs" />
+    <Compile Include="Tree.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

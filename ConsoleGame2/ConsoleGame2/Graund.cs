@@ -14,7 +14,7 @@ namespace ConsoleGame2
         }
 
         public Graund(int x, int y) :
-            base(x, y, "#", false, true)
+            base(x, y, " ", false, true)
         {
         }
     }
