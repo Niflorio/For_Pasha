@@ -9,12 +9,12 @@ namespace ConsoleGame2
     public class Gate : Cell
     {
         public Gate(int x, int y, string value, bool movable, bool crossable) :
-            base(x, y, value, movable, crossable)
+            base(x, y, value, crossable)
         {
         }
 
         public Gate(int x, int y) :
-            base(x, y, "A", false, true)
+            base(x, y, "A", true)
         {
         }
     }

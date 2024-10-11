@@ -8,13 +8,13 @@ namespace ConsoleGame2
 {
     public class Wall: Cell
     {
-        public Wall(int x, int y, string value, bool movable, bool crossable) :
-            base(x, y, value, movable, crossable)
+        public Wall(int x, int y, string value, bool crossable) :
+            base(x, y, value, crossable)
         {
         }
 
         public Wall(int x, int y) :
-            base(x, y, "#", false, false)
+            base(x, y, "#", false)
         {
         }
     }

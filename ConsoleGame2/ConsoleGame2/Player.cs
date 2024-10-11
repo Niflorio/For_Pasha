@@ -8,13 +8,13 @@ namespace ConsoleGame2
 {
     public class Player : Cell
     {
-        public Player(int x, int y, string value, bool movable, bool crossable) :
-            base(x, y, value, movable, crossable)
+        public Player(int x, int y, string value, bool crossable) :
+            base(x, y, value, crossable)
         {
         }
 
         public Player(int x, int y) :
-            base(x, y, "C", false, true)
+            base(x, y, "C", true)
         {
         }
     }
